@@ -5,12 +5,12 @@ import(
   "github.com/nu7hatch/gouuid"
 )
 
-func GetRandomId() {
+func GetRandomId() string {
   u4, err := uuid.NewV4()
   id := u4.String()
   if err != nil {
     fmt.Println("error:", err)
-      return
+      return "Error occurred"
   }
   return id
 }
