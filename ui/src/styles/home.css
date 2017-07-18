@@ -1,19 +1,15 @@
-.contentWrapper {
-  padding: 15px;
+/* home component styles starts*/
+
+.main-header {
+    background-color: #313131;
+    margin-bottom: 22px;
+}
+#logo {
+    margin: 0 0 0 0;
 }
 
-.header {
-  font-size: 36px;
-  font-weight: 900;
-  padding-bottom: 30px;
-}
-
-.contentContainer {
-  padding: 20px 10px 10px;
-  width: 40%;
-  border: 2px solid #000;
-}
-
-.btnWrapper {
-  padding-top: 30px;
+.img-responsive {
+    display: block;
+    max-width: 100%;
+    height: auto;
 }

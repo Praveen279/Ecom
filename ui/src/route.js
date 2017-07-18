@@ -7,6 +7,7 @@ import { syncHistoryWithStore } from 'preact-router-redux'
 import { createBrowserHistory } from 'history';
 import configureStore from './store/configureStore';
 import HomeContainer from './containers/HomeContainer';
+import ProductsContainer from './containers/ProductsContainer'
 
 const store = configureStore();
 const history = syncHistoryWithStore(createBrowserHistory(), store)
@@ -15,6 +16,7 @@ let routes= (
   <Provider store={store}>
     <Router history={history}>
       <Route path='/' component={HomeContainer}/>
+      <Route path='/products' component={ProductsContainer}/>
       </Router>
   </Provider>
 )

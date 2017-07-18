@@ -5,7 +5,7 @@ import '../styles/home.css'
 
 const HomeComponent = (props) => ( //eslint-disable-line no-unused-vars
 	<div className='w100p'>
-		E-com App!!!
+	
 	</div>
 )
 

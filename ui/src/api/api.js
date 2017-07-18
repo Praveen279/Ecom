@@ -2,7 +2,7 @@ const products = [
   {
     "_id": "595bab30b97f675c5633de6a",
     "index": 1,
-    "picture": "http://placehold.it/256x256",
+    "picture": "http://placehold.it/128x128",
     "name": "Bishop Golden",
     "gender": "male",
     "price": "2009",
@@ -11,7 +11,7 @@ const products = [
   {
     "_id": "595bab30aedbdcea4f8403a2",
     "index": 2,
-    "picture": "http://placehold.it/256x256",
+    "picture": "http://placehold.it/128x128",
     "name": "Bradley Rush",
     "gender": "male",
     "price": "2004",
@@ -20,7 +20,7 @@ const products = [
   {
     "_id": "595bab3059dc7d03e879158a",
     "index": 3,
-    "picture": "http://placehold.it/256x256",
+    "picture": "http://placehold.it/128x128",
     "name": "Cassie Webb",
     "gender": "female",
     "price": "20045",
@@ -29,7 +29,7 @@ const products = [
   {
     "_id": "595bab300a41deb6fb8b6b9b",
     "index": 4,
-    "picture": "http://placehold.it/256x256",
+    "picture": "http://placehold.it/128x128",
     "name": "Cohen Camacho",
     "gender": "male",
     "price": "20066",
@@ -38,7 +38,7 @@ const products = [
   {
     "_id": "595bab30a571deddde981f26",
     "index": 5,
-    "picture": "http://placehold.it/256x256",
+    "picture": "http://placehold.it/128x128",
     "name": "Sarah Edwards",
     "gender": "female",
     "price": "2003",
@@ -47,7 +47,7 @@ const products = [
   {
     "_id": "595bab308cfe209d1beff69a",
     "index": 6,
-    "picture": "http://placehold.it/256x256",
+    "picture": "http://placehold.it/128x128",
     "name": "Sybil Johns",
     "gender": "female",
     "price": "2003",
@@ -56,7 +56,7 @@ const products = [
   {
     "_id": "595bab303de0f538d5cd8e95",
     "index": 7,
-    "picture": "http://placehold.it/256x256",
+    "picture": "http://placehold.it/128x128",
     "name": "Mercer Hutchinson",
     "gender": "male",
     "price": "2001",
@@ -65,7 +65,7 @@ const products = [
   {
     "_id": "595bab308bad58e36f982194",
     "index": 8,
-    "picture": "http://placehold.it/256x256",
+    "picture": "http://placehold.it/128x128",
     "name": "Robert Wagner",
     "gender": "female",
     "price": "20048",
@@ -74,7 +74,7 @@ const products = [
   {
     "_id": "595bab3004a4bb1d49782554",
     "index": 9,
-    "picture": "http://placehold.it/256x256",
+    "picture": "http://placehold.it/128x128",
     "name": "Stephanie Baird",
     "gender": "female",
     "price": "2005",
@@ -83,7 +83,7 @@ const products = [
   {
     "_id": "595bab3067c0582fd8240d97",
     "index": 10,
-    "picture": "http://placehold.it/256x256",
+    "picture": "http://placehold.it/128x128",
     "name": "Knox Torres",
     "gender": "male",
     "price": "8989",
@@ -92,7 +92,7 @@ const products = [
   {
     "_id": "595bab309835b0105d875964",
     "index": 11,
-    "picture": "http://placehold.it/256x256",
+    "picture": "http://placehold.it/128x128",
     "name": "Soto Chang",
     "gender": "male",
     "price": "9087",
@@ -101,7 +101,7 @@ const products = [
   {
     "_id": "595bab3072e753ad996cafb3",
     "index": 12,
-    "picture": "http://placehold.it/256x256",
+    "picture": "http://placehold.it/128x128",
     "name": "Pruitt Oliver",
     "gender": "male",
     "price": "6867",
@@ -110,7 +110,7 @@ const products = [
   {
     "_id": "595bab3069f9def279105915",
     "index": 13,
-    "picture": "http://placehold.it/256x256",
+    "picture": "http://placehold.it/128x128",
     "name": "Bartlett Meyers",
     "gender": "male",
     "price": "7676",
@@ -119,7 +119,7 @@ const products = [
   {
     "_id": "595bab3040ce03b4cb262a69",
     "index": 14,
-    "picture": "http://placehold.it/256x256",
+    "picture": "http://placehold.it/128x128",
     "name": "Simpson Hill",
     "gender": "male",
     "price": "2287",
@@ -128,7 +128,7 @@ const products = [
   {
     "_id": "595bab301202a425b91b901f",
     "index": 15,
-    "picture": "http://placehold.it/256x256",
+    "picture": "http://placehold.it/128x128",
     "name": "Cannon Cunningham",
     "gender": "male",
     "price": "1234",
@@ -137,7 +137,7 @@ const products = [
   {
     "_id": "595bab30102fd074a9c80cfc",
     "index": 16,
-    "picture": "http://placehold.it/256x256",
+    "picture": "http://placehold.it/128x128",
     "name": "Bianca Scott",
     "gender": "female",
     "price": "535",
@@ -146,7 +146,7 @@ const products = [
   {
     "_id": "595bab306b12f3217f272aaf",
     "index": 17,
-    "picture": "http://placehold.it/256x256",
+    "picture": "http://placehold.it/128x128",
     "name": "Betsy Rios",
     "gender": "female",
     "price": "345345",
@@ -155,7 +155,7 @@ const products = [
   {
     "_id": "595bab3007895842c22c45ba",
     "index": 18,
-    "picture": "http://placehold.it/256x256",
+    "picture": "http://placehold.it/128x128",
     "name": "Mcclure Valenzuela",
     "gender": "male",
     "price": "345",
@@ -164,7 +164,7 @@ const products = [
   {
     "_id": "595bab307dfa74f9a35e2420",
     "index": 19,
-    "picture": "http://placehold.it/256x256",
+    "picture": "http://placehold.it/128x128",
     "name": "Tanner Spears",
     "gender": "male",
     "price": "345345",
@@ -173,7 +173,7 @@ const products = [
   {
     "_id": "595bab306532179887725b84",
     "index": 20,
-    "picture": "http://placehold.it/256x256",
+    "picture": "http://placehold.it/128x128",
     "name": "Harding Sims",
     "gender": "male",
     "price": "997889",
@@ -181,114 +181,5 @@ const products = [
   }
 ]
 
-const AllCategories = [
 
-  {
-    name : "BUTANE",
-    id : 1,
-    url : "http://abc.com"  
-  },
-  {
-    name : "DETOX & TEST KIT",
-    id : 2,
-    url : "http://abc.com"  
-  },
-  {
-    name : "E-HOOKAH &amp; HOOKAH",
-    id : 3,
-    url : "http://abc.com"  
-  },
-  {
-    name : "HERB GRINDER",
-    id : 4,
-    url : "http://abc.com"  
-  },
-  {name : "HOOKAH CHARCOAL",
-    id : 5,
-    url : "http://abc.com"  },
-  {name : "INCENSE",
-    id : 6,
-    url : "http://abc.com"  },
-  {name : "LIGHTERS &amp; ACCESSORIES",
-    id : 7,
-    url : "http://abc.com"  
-  },
-  {name : "NICOTINE POUCH",
-    id : 8,
-    url : "http://abc.com"  
-  },
-  {name : "SAFE CAN",
-    id : 9,
-    url : "http://abc.com"  
-  },
-  {name : "WHIP CREAM CHARGERS",
-    id : 10,
-    url : "http://abc.com"  
-  },
-  {name : "Ziplock Bags",
-    id : 11,
-    url : "http://abc.com"  
-  },
-  {name : "BUNDLE OFFER",
-    id : 12,
-    url : "http://abc.com"  
-  },
-  {name : "HOT PRODUCTS",
-    id : 13,
-    url: "http://abc.com"  
-  },
-  {name : "GENERAL PRODUCTS",
-    id : 14,
-    url : "http://abc.com"  
-  }
-  
-]
 
-export function getCategories() {
-  return function(dispatch) {
-    dispatch({
-      type: 'FETCH_CATEGORIESLIST_REQUEST'
-    });
-    return fetch('http://services.groupkt.com/country/search?text=un')
-      .then(response => response.json().then(response => ({ response })))
-      .then(({ response}) => {
-        if (!response) {
-          dispatch({
-            type: 'FETCH_CATEGORIESLIST_FAILURE',
-            error: response.RestResponse.messages
-          });
-        } else {
-          dispatch({
-            type: 'FETCH_CATEGORIESLIST_SUCCESS',
-            payload: response.RestResponse.result
-          });
-        }
-      });
-  }
-}
-
-export function getProducts() {
-  return function(dispatch){
-    dispatch({
-      type: 'FETCH_PRODUCTLIST_REQUEST'
-    });
-
-    return dispatch({
-      type : 'FETCH_PRODUCTLIST_SUCCESS',
-      payload : products
-    });
-  } 
-}
-
-export function getAllCategories() {
-  return function(dispatch){
-    dispatch({
-      type: 'FETCH_ALLCATEGORIES_REQUEST'
-    });
-
-    return dispatch({
-      type : 'FETCH_ALLCATEGORIES_SUCCESS',
-      payload : AllCategories
-    });
-  } 
-}

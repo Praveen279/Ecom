@@ -1,0 +1,116 @@
+body {
+    font-family: "Raleway", san-serif;
+}
+
+.product-thumb {
+    border: 1px solid #efefef;
+    margin-bottom: 20px;
+    overflow: auto;
+}
+
+.product-grid .product-thumb .image {
+    float: none;
+}
+
+.product-thumb .image {
+    text-align: center;
+}
+
+.product-thumb .image a {
+    display: block;
+}
+a {
+    font-weight: bold;
+    color: #3a3535;
+    text-decoration: none;
+     background-color: transparent;
+    
+}
+
+.img-responsive {
+    display: block;
+    max-width: 100%;
+    height: auto;
+}
+
+.product-thumb .image img {
+    margin-left: auto;
+    margin-right: auto;
+}
+img {
+    vertical-align: middle;
+}
+.product-thumb .caption {
+    padding: 0 20px;
+    /* min-height: 180px; */
+    min-height: 130px;
+}
+.product-thumb h4 {
+    font-weight: bold;
+}
+
+h4 {
+    font-size: 15px;
+}
+.product-thumb .button-group {
+    border-top: 1px solid #ddd;
+    background-color: #f9f9f9;
+    overflow: auto;
+}
+
+.qtybutton {
+    width: 35%;
+    text-align: right;
+}
+.dirctinpt {
+    width: 35%;
+    margin-top: 5px !important;
+    margin: auto;
+    text-align: center;
+    margin-bottom: 5px;
+}
+.product-thumb .button-group .btn-add-cart {
+    color: #DA4B52;
+}
+
+.product-thumb .button-group button {
+    width: 60%;
+    border: none;
+    display: inline-block;
+    float: left;
+    background-color: #f9f9f9;
+    color: #423e3e;
+    line-height: 38px;
+    font-weight: bold;
+    text-align: center;
+    text-transform: uppercase;
+}
+.btn-link {
+    background-color: rgba(0, 0, 0, 0);
+    background-image: none;
+    box-shadow: none;
+    border-color: rgba(0, 0, 0, 0);
+    cursor: pointer;
+    color: #23A1D1;
+    border-radius: 0;
+}
+
+.fa {
+    font-size: 14px;
+}
+
+.fa {
+    display: inline-block;
+    font: normal normal normal 14px/1 FontAwesome;
+    font-size: inherit;
+    text-rendering: auto;
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+}
+.product-thumb .button-group .btn-add-cart {
+    color: #DA4B52;
+}
+.product-thumb .button-group button + button {
+    width: 20%;
+    border-left: 1px solid #ddd;
+}
