@@ -1,6 +1,6 @@
 import { createStore, applyMiddleware, compose } from 'redux'
-import rootReducer from '../reducers'
-import thunkMiddleware from 'redux-thunk';
+import rootReducer from '../reducers/index'
+import thunkMiddleware from 'redux-thunk'
 import createLogger from 'redux-logger'
 
 // enable Redux Dev Tools

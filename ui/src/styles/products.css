@@ -1,7 +1,3 @@
-body {
-    font-family: "Raleway", san-serif;
-}
-
 .product-thumb {
     border: 1px solid #efefef;
     margin-bottom: 20px;
@@ -113,4 +109,23 @@ h4 {
 .product-thumb .button-group button + button {
     width: 20%;
     border-left: 1px solid #ddd;
+}
+
+.iconStyles {
+  margin-top: 25px;
+  padding: 0px 10px;
+  cursor: pointer;
+}
+
+.productItem {
+  display: flex;
+}
+
+.price {
+  font-size: 18px !important;
+  font-weight: 200;
+}
+
+.quantity, .code {
+  font-size: 14px;
 }

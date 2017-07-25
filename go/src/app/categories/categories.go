@@ -12,6 +12,7 @@ import(
 type Category struct {
   Id string
   Name string
+	Description string
 }
 
 func GetCategories(w http.ResponseWriter, r *http.Request) {
@@ -42,7 +43,7 @@ func AddCategory(w http.ResponseWriter, r *http.Request) {
 			fmt.Println("error in reading the json data", err)	
 		}
 		c := session.DB("ecomdev").C("categories")
-		c.Insert(&Category{util.GetRandomId(), t.Name})		
+		c.Insert(&Category{util.GetRandomId(), t.Name, t.Description})		
 		GetCategories(w, r)
 	} else {
 		fmt.Println("Error in getting a db session")
@@ -60,7 +61,7 @@ func UpdateCategory(w http.ResponseWriter, r *http.Request) {
 		}
 		c := session.DB("ecomdev").C("categories")
 		colQuerier := bson.M{"id": t.Id}
-		change := bson.M{"$set": bson.M{"name": t.Name}}
+		change := bson.M{"$set": bson.M{"name": t.Name, "description": t.Description}}
 		err = c.Update(colQuerier, change)
 		GetCategories(w, r)
 	} else {
@@ -77,11 +78,12 @@ func DeleteCategory(w http.ResponseWriter, r *http.Request) {
 		if err != nil {
 			fmt.Println("error in decoding the input", err)
 		}
-		c := session.DB("ecomdev").C("categories")
-		err = c.Remove(bson.M{"id": t.Id})
+		c := session.DB("ecomdev")
+		err = c.C("categories").Remove(bson.M{"id": t.Id})
 		if err != nil {
-			fmt.Println("error in deleting the record", err)	
+			fmt.Println("error in deleting the record", err)
 		}
+		c.C("products").RemoveAll(bson.M{"categoryid": t.Id})
 		GetCategories(w, r)
 	} else {
 		fmt.Println("Error in getting a db session")

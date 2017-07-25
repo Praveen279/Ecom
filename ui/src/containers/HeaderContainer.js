@@ -1,31 +1,18 @@
-
-
 /*eslint-disable no-unused-vars */
 import React, { Component } from 'preact-compat'
-import HomeLogoComponent from '../components/HomeLogoComponent'
-import AllCategoriesComponent from '../components/AllCategoriesComponent'
-
+import HeaderComponent from '../components/HeaderComponent'
 /*eslint-enable no-unused-vars */
 import { bindActionCreators } from 'redux';
 import { connect } from 'preact-redux';
 import * as actionCreators from '../actions/actions';
 
-
-
 class HeaderContainer extends Component {
-  
-  componentWillMount() {
-    this.props.getAllCategories();
-  }
 
-  
   render() {
-    
     return (
-			<header className="main-header">
-                <HomeLogoComponent />
-                <AllCategoriesComponent AllCategories={this.props.data.AllCategories.AllCategories}/>
-			</header>
+			<div>
+				<HeaderComponent categories={this.props.data.home.categories} />
+			</div>
 		);
   }
 }
