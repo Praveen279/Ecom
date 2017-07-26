@@ -11,7 +11,12 @@ class HeaderContainer extends Component {
   render() {
     return (
 			<div>
-				<HeaderComponent categories={this.props.data.home.categories} />
+				<HeaderComponent
+          categories={this.props.data.home.categories}
+          getProductsByCategory={this.props.getProductsByCategory}
+          getProducts={this.props.getProducts}
+          getProductsByName={this.props.getProductsByName}
+        />
 			</div>
 		);
   }

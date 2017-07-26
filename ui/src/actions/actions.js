@@ -131,6 +131,52 @@ export function getProducts() {
   }
 }
 
+export function getProductsByCategory(categoryId) {
+  return function(dispatch) {
+    dispatch({
+      type: 'FETCH_PRODCUTSBYCATEGORY_REQUEST'
+    });
+    return fetch('http://localhost:8080/productsByCategory?categoryId=' + categoryId)
+      .then(response => response.json().then(response => ({ response })))
+      .then(({ response}) => {
+        if (!response) {
+          dispatch({
+            type: 'FETCH_PRODUCTSBYCATEGORY_FAILURE',
+            error: 'Error Occured'
+          });
+        } else {
+          dispatch({
+            type: 'FETCH_PRODUCTSBYCATEGORY_SUCCESS',
+            payload: response
+          });
+        }
+      });
+  }
+}
+
+export function getProductsByName(searchString) {
+  return function(dispatch) {
+    dispatch({
+      type: 'FETCH_PRODCUTSBYNAME_REQUEST'
+    });
+    return fetch('http://localhost:8080/productsBySearchString?searchString=' + searchString)
+      .then(response => response.json().then(response => ({ response })))
+      .then(({ response}) => {
+        if (!response) {
+          dispatch({
+            type: 'FETCH_PRODCUTSBYNAME_FAILURE',
+            error: 'Error Occured'
+          });
+        } else {
+          dispatch({
+            type: 'FETCH_PRODCUTSBYNAME_SUCCESS',
+            payload: response
+          });
+        }
+      });
+  }
+}
+
 export function saveProduct(product) {
   return function(dispatch) {
     dispatch({

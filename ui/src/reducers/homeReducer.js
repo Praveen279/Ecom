@@ -14,6 +14,14 @@ let homeReducer = (state = initialState, action = null) => {
     return Object.assign({}, state, {
       products: action.payload
     })
+  case 'FETCH_PRODUCTSBYCATEGORY_SUCCESS':
+    return Object.assign({}, state, {
+      products: action.payload
+    })
+  case 'FETCH_PRODCUTSBYNAME_SUCCESS':
+    return Object.assign({}, state, {
+      products: action.payload
+    })
   case 'SAVE_CATEGORY_SUCCESS':
     return Object.assign({}, state, {
       categories: action.payload

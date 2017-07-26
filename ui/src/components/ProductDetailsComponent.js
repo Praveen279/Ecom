@@ -4,7 +4,7 @@
  /* need to add hiperlink inside a tag */
  import '../styles/products.css'
  const ProductDetailsComponent = (props) => (
-     <div className="product-layout product-grid col-lg-3 col-md-3 col-sm-6 col-xs-12">
+     <div className="productDetails product-layout product-grid col-lg-3 col-md-3 col-sm-6 col-xs-12">
          <div className="product-thumb">
              <div className="image">
                  <a href="#"><img className="img-responsive" src={props.product.Image}></img></a>

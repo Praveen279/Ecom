@@ -38,6 +38,44 @@ func GetProducts(w http.ResponseWriter, r *http.Request) {
 	}
 }
 
+func GetProductsByCategory(w http.ResponseWriter, r *http.Request) {
+	session := db.GetMongoSession()
+	var products []Product
+	categoryId := r.URL.Query().Get("categoryId")
+	if session != nil {
+		err := session.DB("ecomdev").C("products").Find(bson.M{"categoryid": categoryId}).All(&products)
+    if err != nil {
+			fmt.Println("Error in getting the records", err)
+    }
+		js, error := json.Marshal(products)
+		if error != nil {
+			fmt.Println("Error in parsing the records", err)
+		}
+		w.Write(js)
+	} else {
+		fmt.Println("Error in getting a db session")
+	}
+}
+
+func GetProductsBySearchString(w http.ResponseWriter, r *http.Request) {
+	session := db.GetMongoSession()
+	var products []Product
+	searchString := r.URL.Query().Get("searchString")
+	if session != nil {
+		err := session.DB("ecomdev").C("products").Find(bson.M{"name": searchString}).All(&products)
+    if err != nil {
+			fmt.Println("Error in getting the records", err)
+    }
+		js, error := json.Marshal(products)
+		if error != nil {
+			fmt.Println("Error in parsing the records", err)
+		}
+		w.Write(js)
+	} else {
+		fmt.Println("Error in getting a db session")
+	}
+}
+
 func AddProduct(w http.ResponseWriter, r *http.Request) {
 	session := db.GetMongoSession()
 	if session != nil {

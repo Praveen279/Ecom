@@ -26,28 +26,28 @@
 .sellerSection {
   display: flex;
   position: absolute;
-  right: 20px;
+  right: 10%;
   top: 170px;
   font-weight: bold;
 }
 
 .sellerSection a {
-  padding-right: 10px;
+  padding-left: 10px;
   cursor: pointer;
   color: #FFF;
   text-decoration: none;
 }
 
-.userSection {
+.commonSection {
   display: flex;
   position: absolute;
-  right: 20px;
+  right: 10%;
   top: 20px;
   color: #fff;
   font-weight: bold;
 }
 
-.userSection div {
-  padding-right: 10px;
+.commonSection div {
+  padding-left: 10px;
   cursor: pointer;
 }

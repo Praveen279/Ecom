@@ -133,3 +133,13 @@ h4 {
 .paddingTop20 {
   padding-top : 20px;
 }
+
+.productsContainer {
+  margin: 0 10%;
+}
+
+.productDetails {
+  padding-top: 20px;
+  padding-right: 0px !important;
+  padding-left: 0px !important;
+}

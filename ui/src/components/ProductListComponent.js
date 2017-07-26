@@ -1,18 +1,17 @@
-
  /*eslint-disable no-unused-vars */
  import React, { Component } from 'preact-compat'
  import ProductDetailsComponent from './ProductDetailsComponent'
- 
+ /*eslint-enable no-unused-vars */
  
  const ProductListComponent = (props) => (
-  <div className="container">
-    <div className="paddingTop20">
-             {
-                props.products.length > 0 
-                ? props.products.map(function (product) {return <ProductDetailsComponent key={product._id} product={product} />}, props) 
-                : <div>No product available.</div>
-             }
+  <div class='productsContainer'>
+  {
+    props.products.length > 0 ?
+    props.products.map(product => {return <ProductDetailsComponent key={product._id} product={product} />}) :
+    <div class='noProductsText'>
+      No products available.
     </div>
+  }
   </div>
  )
  

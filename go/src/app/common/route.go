@@ -19,6 +19,8 @@ func HandleRoute() {
 	rt.Handle("GET", "/products", http.HandlerFunc(products.GetProducts))
 	rt.Handle("POST", "/products/update", http.HandlerFunc(products.UpdateProduct))
 	rt.Handle("POST", "/products/delete", http.HandlerFunc(products.DeleteProduct))
+	rt.Handle("GET", "/productsByCategory", http.HandlerFunc(products.GetProductsByCategory))
+	rt.Handle("GET", "/productsBySearchString", http.HandlerFunc(products.GetProductsBySearchString))
 	// rt.Handle("DELETE", "/products", http.HandlerFunc(products.eleteProduct))
 	handler := cors.Default().Handler(rt)
 	// Bind to a port and pass our router in
