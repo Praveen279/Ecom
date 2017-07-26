@@ -144,7 +144,8 @@ export function saveProduct(product) {
         availability: product.availability,
         price: product.price,
         categoryId: product.categoryId,
-        code: product.code
+        code: product.code,
+        image: product.image
       })
     })
       .then(response => response.json().then(response => ({ response })))

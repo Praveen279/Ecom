@@ -44,7 +44,8 @@ class AdminProductsComponent extends Component {
       code: this.productCode.value,
       availability: parseInt(this.productAvailability.value),
       price: parseFloat(this.productPrice.value),
-      categoryId: this.state.categoryId
+      categoryId: this.state.categoryId,
+      image: 'http://www.akwholesale.com/image/cache/catalog/vaporizer/ALIEN/TFV12_BLACK-600x600_0.jpg'
     })
     this.hideForm()
   }
@@ -71,7 +72,8 @@ class AdminProductsComponent extends Component {
       code: this.productCode.value,
       availability: this.productAvailability.value,
       price: this.productPrice.value,
-      categoryId: this.state.selectedProduct.CategoryId
+      categoryId: this.state.selectedProduct.CategoryId,
+      image: this.state.selectedProduct.Image
     })
     this.hideForm()
   }

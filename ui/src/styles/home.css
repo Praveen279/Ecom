@@ -1,15 +1,15 @@
 /* home component styles starts*/
 
 .main-header {
-    background-color: #313131;
-    margin-bottom: 22px;
+  background-color: #313131;
+  margin-bottom: 22px;
 }
 #logo {
-    margin: 0 0 0 0;
+  margin: 0 0 0 0;
 }
 
 .img-responsive {
-    display: block;
-    max-width: 100%;
-    height: auto;
+  display: block;
+  max-width: 100%;
+  height: auto;
 }

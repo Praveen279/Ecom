@@ -6,6 +6,7 @@ import { bindActionCreators } from 'redux';
 import { connect } from 'preact-redux';
 import * as actionCreators from '../actions/actions';
 
+
 class HomeContainer extends Component {
 
   componentWillMount() {
@@ -16,7 +17,7 @@ class HomeContainer extends Component {
   render() {
     return (
 			<div>
-				<HomeComponent />
+				<HomeComponent products={this.props.data.home.products} categroies={this.props.data.home.categories} />
 			</div>
 		);
   }

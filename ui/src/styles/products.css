@@ -39,7 +39,7 @@ img {
 .product-thumb .caption {
     padding: 0 20px;
     /* min-height: 180px; */
-    min-height: 130px;
+    /*min-height: 130px;*/
 }
 .product-thumb h4 {
     font-weight: bold;
@@ -128,4 +128,8 @@ h4 {
 
 .quantity, .code {
   font-size: 14px;
+}
+
+.paddingTop20 {
+  padding-top : 20px;
 }

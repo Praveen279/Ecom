@@ -17,6 +17,7 @@ type Product struct {
 	Description string
 	Availability int
 	Price float32
+	Image string
 }
 
 func GetProducts(w http.ResponseWriter, r *http.Request) {
@@ -47,7 +48,7 @@ func AddProduct(w http.ResponseWriter, r *http.Request) {
 			fmt.Println("error in reading the json data", err)	
 		}
 		c := session.DB("ecomdev").C("products")
-		c.Insert(&Product{util.GetRandomId(), p.CategoryId, p.Name, p.Code, p.Description, p.Availability, p.Price})
+		c.Insert(&Product{util.GetRandomId(), p.CategoryId, p.Name, p.Code, p.Description, p.Availability, p.Price, p.Image})
 		GetProducts(w, r)
 	} else {
 		fmt.Println("Error in getting a db session")
@@ -71,7 +72,8 @@ func UpdateProduct(w http.ResponseWriter, r *http.Request) {
 			"code": p.Code,
 			"description": p.Description,
 			"availibility": p.Availability,
-			"price": p.Price}}
+			"price": p.Price,
+		  "image": p.Image}}
 		err = c.Update(colQuerier, change)
 		GetProducts(w, r)
 	} else {
