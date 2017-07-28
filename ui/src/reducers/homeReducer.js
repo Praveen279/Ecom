@@ -1,7 +1,11 @@
 
 const initialState = {
   categories: [],
-  products: []
+  products: [],
+  user: {
+    role: 'CONSUMER',
+    id: ''
+  }
 }
 
 let homeReducer = (state = initialState, action = null) => {
@@ -45,6 +49,14 @@ let homeReducer = (state = initialState, action = null) => {
   case 'DELETE_PRODUCT_SUCCESS':
     return Object.assign({}, state, {
       products: action.payload
+    })
+  case 'LOGIN_SUCCESS':
+    return Object.assign({}, state, {
+      user: action.payload
+    })
+  case 'LOGOUT_SUCCESS':
+    return Object.assign({}, state, {
+      user: initialState.user
     })
   default:
     return state

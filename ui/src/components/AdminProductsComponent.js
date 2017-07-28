@@ -128,7 +128,7 @@ class AdminProductsComponent extends Component {
             /><br />
             <input
               type='text'
-              placeholder='Price'
+              placeholder='Price Eg: 100$'
               class='productInput'
               value={this.state.selectedProduct.Price ? this.state.selectedProduct.Price : ''}
               ref={(price) => { this.productPrice = price; }}

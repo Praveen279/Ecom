@@ -12,7 +12,7 @@ class AdminCategoriesContainer extends Component {
   render() {
     return (
 			<div>
-        <HeaderContainer />
+        <HeaderContainer login={this.props.login} />
 				<AdminCategoriesComponent
           saveCategory={this.props.saveCategory}
           deleteCategory={this.props.deleteCategory}

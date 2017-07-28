@@ -22,7 +22,7 @@ type Product struct {
 
 func GetProducts(w http.ResponseWriter, r *http.Request) {
 	session := db.GetMongoSession()
-	var products []Product
+	products := make([]Product, 0)
 	if session != nil {
 		err := session.DB("ecomdev").C("products").Find(nil).All(&products)
     if err != nil {
@@ -40,7 +40,7 @@ func GetProducts(w http.ResponseWriter, r *http.Request) {
 
 func GetProductsByCategory(w http.ResponseWriter, r *http.Request) {
 	session := db.GetMongoSession()
-	var products []Product
+	products := make([]Product, 0)
 	categoryId := r.URL.Query().Get("categoryId")
 	if session != nil {
 		err := session.DB("ecomdev").C("products").Find(bson.M{"categoryid": categoryId}).All(&products)
@@ -59,10 +59,11 @@ func GetProductsByCategory(w http.ResponseWriter, r *http.Request) {
 
 func GetProductsBySearchString(w http.ResponseWriter, r *http.Request) {
 	session := db.GetMongoSession()
-	var products []Product
+	products := make([]Product, 0)
 	searchString := r.URL.Query().Get("searchString")
+	pattern := ".*"+ searchString + ".*"
 	if session != nil {
-		err := session.DB("ecomdev").C("products").Find(bson.M{"name": searchString}).All(&products)
+		err := session.DB("ecomdev").C("products").Find(bson.M{"name":  bson.M{"$regex": bson.RegEx{Pattern: pattern, Options: "i"}}}).All(&products)
     if err != nil {
 			fmt.Println("Error in getting the records", err)
     }

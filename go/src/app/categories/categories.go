@@ -17,7 +17,7 @@ type Category struct {
 
 func GetCategories(w http.ResponseWriter, r *http.Request) {
 	session := db.GetMongoSession()
-	var categories []Category
+	categories := make([]Category, 0)
 	if session != nil {
 		err := session.DB("ecomdev").C("categories").Find(nil).All(&categories)
     if err != nil {

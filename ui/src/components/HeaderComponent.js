@@ -10,7 +10,7 @@ const HeaderComponent = (props) => ( //eslint-disable-line no-unused-vars
 	<div class='root'>
 		<div class='commonSection'>
 			<div>Register</div>
-			<div>Login</div>
+			{props.user.id === '' ? <Link href='/login'>Login</Link> : <div onClick={props.logout}>Logout</div>}
 		</div>
 		<div class='searchField'>
       <input
@@ -24,17 +24,17 @@ const HeaderComponent = (props) => ( //eslint-disable-line no-unused-vars
 				onClick={() => props.getProductsByName(searchString.value)}
       />
 		</div>
-		<div>
+		{props.user.role === 'CONSUMER' && <div>
 			<CategoriesComponent
         categories={props.categories}
 				getProductsByCategory={props.getProductsByCategory}
 				getProducts={props.getProducts}
       />
-		</div>
-		<div class='sellerSection'>
+		</div>}
+		{props.user.role === 'ADMIN' && <div class='sellerSection'>
 			<Link href='/categories'>Categories</Link>
 			<Link href='/products'>Products</Link>
-		</div>
+		</div>}
 	</div>
 )
 

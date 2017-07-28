@@ -1,34 +1,28 @@
 /*eslint-disable no-unused-vars */
 import React, { Component } from 'preact-compat'
-import HeaderComponent from '../components/HeaderComponent'
+import LoginComponent from '../components/LoginComponent'
 import { Router } from 'preact-router';
 /*eslint-enable no-unused-vars */
 import { bindActionCreators } from 'redux';
 import { connect } from 'preact-redux';
 import * as actionCreators from '../actions/actions';
 
-class HeaderContainer extends Component {
+
+class LoginContainer extends Component {
   constructor(props) {
     super(props)
-    this.logout = this.logout.bind(this)
+    this.login = this.login.bind(this)
   }
 
-  logout() {
+  login(user) {
+    this.props.login(user)
     Router.route('/')
-    this.props.logout()
   }
 
   render() {
     return (
 			<div>
-				<HeaderComponent
-          categories={this.props.data.home.categories}
-          getProductsByCategory={this.props.getProductsByCategory}
-          getProducts={this.props.getProducts}
-          getProductsByName={this.props.getProductsByName}
-          user={this.props.data.home.user}
-          logout={this.logout}
-        />
+				<LoginComponent login={this.login} />
 			</div>
 		);
   }
@@ -44,4 +38,4 @@ function mapDispachToProps(dispatch) {
   return bindActionCreators(actionCreators, dispatch)
 }
 
-export default connect(mapStateToProps, mapDispachToProps)(HeaderContainer)
+export default connect(mapStateToProps, mapDispachToProps)(LoginContainer)

@@ -7,6 +7,7 @@ import { syncHistoryWithStore } from 'preact-router-redux'
 import { createBrowserHistory } from 'history';
 import configureStore from './store/configureStore';
 import HomeContainer from './containers/HomeContainer';
+import LoginContainer from './containers/LoginContainer';
 import AdminCategoriesContainer from './containers/AdminCategoriesContainer';
 import AdminproductsContainer from './containers/AdminProductsContainer';
 
@@ -17,6 +18,7 @@ let routes= (
   <Provider store={store}>
     <Router history={history}>
       <Route path='/' component={HomeContainer}/>
+      <Route path='/login' component={LoginContainer}/>
       <Route path='/categories' component={AdminCategoriesContainer}/>
       <Route path='/products' component={AdminproductsContainer}/>
     </Router>

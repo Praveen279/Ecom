@@ -272,3 +272,20 @@ export function deleteProduct(id) {
       });
   }
 }
+
+export function login(user) {
+  return function(dispatch) {
+    dispatch({
+      type: 'LOGIN_SUCCESS',
+      payload: user 
+    });
+  }
+}
+
+export function logout() {
+  return function(dispatch) {
+    dispatch({
+      type: 'LOGOUT_SUCCESS' 
+    });
+  }
+}

@@ -31,7 +31,8 @@
   font-weight: bold;
 }
 
-.sellerSection a {
+.sellerSection a,
+.commonSection a {
   padding-left: 10px;
   cursor: pointer;
   color: #FFF;

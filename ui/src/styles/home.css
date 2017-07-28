@@ -13,3 +13,27 @@
   max-width: 100%;
   height: auto;
 }
+
+.loginUserBtn {
+  appearance: none;
+  background: #dd4b39;
+}
+
+.loginAdminBtn {
+  appearance: none;
+  background: #54acde;
+}
+
+.loginBtnContainer {
+  position: absolute;
+  right: 35%;
+  top: 40%;
+}
+
+.loginBtnContainer button {
+  border-radius: 25px;
+  border: none;
+  width: 400px;
+  height: 50px;
+  margin: 20px;
+}
