@@ -1,5 +1,5 @@
 /*eslint-disable no-unused-vars*/
- import React from 'react'
+ import React from 'preact-compat'
  /*eslint-enable no-unused-vars*/
  /* need to add hiperlink inside a tag */
  import '../styles/products.css'

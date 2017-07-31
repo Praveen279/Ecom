@@ -1,17 +1,11 @@
-
-
-
-
 /*eslint-disable no-unused-vars */
-
 import React, { Component } from 'preact-compat'
 import { Link } from 'preact-router'
-
 /*eslint-disable no-unused-vars */
-import EmailInputComponent from './EmailInputComponent'
-import PasswordInputComponent from './PasswordInputComponent'
+import InputComponent from './InputComponent'
 import HeaderContainer from './../containers/HeaderContainer'
 
+const regEx = '[abc]'
 class ConfirmPasswordComponent extends Component {
   constructor(){
     super();
@@ -21,22 +15,40 @@ class ConfirmPasswordComponent extends Component {
     return(
       <div>
         <HeaderContainer login={this.props.login} />
-        <div className="container">
+        <div class="container">
           <h2>Confirm Your Password?</h2>
-          <div className="paddingTop10 paddingBottom10">Enter your password</div>
-          <div className="paddingTop10 paddingBottom10">
-            <PasswordInputComponent placeholder="Old Password" />
+          <div class="paddingTop10 paddingBottom10">Enter your password</div>
+          <div class="paddingTop10 paddingBottom10">
+            <InputComponent
+              placeholder='Old password'
+              onChange={() => {/* TODO on event object */}}
+              type='password'
+              regEx={regEx}
+              errorMessage=''
+            />
           </div>
-          <div className="paddingTop10 paddingBottom10">
-            <PasswordInputComponent placeholder="New Password" />
+          <div class="paddingTop10 paddingBottom10">
+            <InputComponent
+              placeholder='New password'
+              onChange={() => {/* TODO on event object */}}
+              type='password'
+              regEx={regEx}
+              errorMessage=''
+            />
           </div>
-          <div className="paddingTop10 paddingBottom10">
-            <PasswordInputComponent placeholder="Confirm Password" />
+          <div class="paddingTop10 paddingBottom10">
+            <InputComponent
+              placeholder='Confirm password'
+              onChange={() => {/* TODO on event object */}}
+              type='password'
+              regEx={regEx}
+              errorMessage=''
+            />
           </div>
 
-          <div className="paddingTop10 paddingBottom10">
-            <Link href='/forgotPassword' className="btn btn-primary pull-left">Back</Link>
-            <Link href='/confirmPassword' className="btn btn-primary pull-right">Continue</Link>
+          <div class="paddingTop10 paddingBottom10">
+            <Link href='/forgotPassword' class="btn btn-primary pull-left">Back</Link>
+            <Link href='/confirmPassword' class="btn btn-primary pull-right">Continue</Link>
           </div>
         </div>
       </div>
@@ -44,4 +56,4 @@ class ConfirmPasswordComponent extends Component {
   }
 }
 
-export default ConfirmPasswordComponent;
+export default ConfirmPasswordComponent

@@ -1,0 +1,18 @@
+.textError {
+  border: 1px solid #F00;
+}
+
+.textError:focus {
+  outline: #F00;
+}
+
+.textInput {
+  width: 90%;
+  padding: 5px;
+  line-height: 18px;
+}
+
+.errorDescription {
+  color: #F00;
+  padding: 5px 0px;
+}

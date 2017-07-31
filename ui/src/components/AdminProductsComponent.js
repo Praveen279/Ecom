@@ -70,8 +70,8 @@ class AdminProductsComponent extends Component {
       name: this.productName.value,
       description: this.productDescription.value,
       code: this.productCode.value,
-      availability: this.productAvailability.value,
-      price: this.productPrice.value,
+      availability: parseInt(this.productAvailability.value),
+      price: parseFloat(this.productPrice.value),
       categoryId: this.state.selectedProduct.CategoryId,
       image: this.state.selectedProduct.Image
     })
