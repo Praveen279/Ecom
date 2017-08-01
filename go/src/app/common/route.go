@@ -6,11 +6,14 @@ import (
 	"app/categories"
 	"github.com/rs/cors"
 	"app/products"
+	"app/auth"
 )
 
 func HandleRoute() {
 	rt := router.New()
 	// Routes consist of a path and a handler function.
+	rt.Handle("POST", "/login", http.HandlerFunc(auth.Login))
+	rt.Handle("POST", "/createUser", http.HandlerFunc(auth.CreateUser))
 	rt.Handle("POST", "/categories/add", http.HandlerFunc(categories.AddCategory))
 	rt.Handle("GET", "/categories", http.HandlerFunc(categories.GetCategories))
 	rt.Handle("POST", "/categories/update", http.HandlerFunc(categories.UpdateCategory))

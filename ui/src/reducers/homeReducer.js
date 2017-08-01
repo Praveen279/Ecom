@@ -58,6 +58,10 @@ let homeReducer = (state = initialState, action = null) => {
     return Object.assign({}, state, {
       user: initialState.user
     })
+  case 'SIGNUP_SUCCESS':
+    return Object.assign({}, state, {
+      user: action.payload[0]
+    })
   default:
     return state
   }

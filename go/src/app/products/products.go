@@ -30,7 +30,7 @@ func GetProducts(w http.ResponseWriter, r *http.Request) {
     }
 		js, error := json.Marshal(products)
 		if error != nil {
-			fmt.Println("Error in parsing the records", err)
+			fmt.Println("Error in parsing the records", error)
 		}
 		w.Write(js)
 	} else {

@@ -1,5 +1,5 @@
 .textError {
-  border: 1px solid #F00;
+  border-bottom: 1px solid #F00 !important;
 }
 
 .textError:focus {
@@ -7,12 +7,21 @@
 }
 
 .textInput {
-  width: 90%;
-  padding: 5px;
-  line-height: 18px;
+  margin-top: 20px;
+  width: 100%;
+  border-bottom: 1px solid #CCC !important;
+  border: none;
+  padding-bottom: 5px;
 }
 
 .errorDescription {
   color: #F00;
   padding: 5px 0px;
+}
+.marginTop20 {
+  margin-top : 20px;
+} 
+
+.marginBottom20 {
+  margin-bottom: 20px;
 }

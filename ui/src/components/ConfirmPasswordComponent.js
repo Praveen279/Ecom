@@ -3,7 +3,6 @@ import React, { Component } from 'preact-compat'
 import { Link } from 'preact-router'
 /*eslint-disable no-unused-vars */
 import InputComponent from './InputComponent'
-import HeaderContainer from './../containers/HeaderContainer'
 
 const regEx = '[abc]'
 class ConfirmPasswordComponent extends Component {
@@ -14,10 +13,8 @@ class ConfirmPasswordComponent extends Component {
   render(){
     return(
       <div>
-        <HeaderContainer login={this.props.login} />
-        <div class="container">
+        <div class="loginContainer">
           <h2>Confirm Your Password?</h2>
-          <div class="paddingTop10 paddingBottom10">Enter your password</div>
           <div class="paddingTop10 paddingBottom10">
             <InputComponent
               placeholder='Old password'
@@ -46,7 +43,7 @@ class ConfirmPasswordComponent extends Component {
             />
           </div>
 
-          <div class="paddingTop10 paddingBottom10">
+          <div class="paddingTop10 paddingBottom10 marginBottom20">
             <Link href='/forgotPassword' class="btn btn-primary pull-left">Back</Link>
             <Link href='/confirmPassword' class="btn btn-primary pull-right">Continue</Link>
           </div>

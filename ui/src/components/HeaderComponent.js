@@ -9,7 +9,7 @@ let searchString
 const HeaderComponent = (props) => ( //eslint-disable-line no-unused-vars
 	<div class='root'>
 		<div class='commonSection'>
-			<div>Register</div>
+			<Link href='/signup'>Register</Link>
 			{props.user.id === '' ? <Link href='/login'>Login</Link> : <div onClick={props.logout}>Logout</div>}
 		</div>
 		<div class='searchField'>
@@ -24,7 +24,7 @@ const HeaderComponent = (props) => ( //eslint-disable-line no-unused-vars
 				onClick={() => props.getProductsByName(searchString.value)}
       />
 		</div>
-		{props.user.role === 'CONSUMER' && <div>
+		{props.user.role === 'USER' && <div>
 			<CategoriesComponent
         categories={props.categories}
 				getProductsByCategory={props.getProductsByCategory}

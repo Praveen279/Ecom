@@ -14,8 +14,10 @@ class InputComponent extends Component {
   }
 
   onChange(e) {
-    const textRegEx = new RegExp(this.props.regEx)
-    textRegEx.test(e.target.value) ? this.setState({ error: true }) : this.setState({ error: false })
+    if(this.props.regEx !== undefined) {
+      const regEx = new RegExp(this.props.regEx)
+      regEx.test(e.target.value) ? this.setState({ error: true }) : this.setState({ error: false })
+    }
     this.props.onChange(e.target.value)
   }
 
@@ -33,7 +35,7 @@ class InputComponent extends Component {
           onChange={this.onChange}
           class={inputClasses}
         />
-        {this.state.error && <div class='errorDescription'>Special characters are not allowed.</div>}
+        {this.state.error && <div class='errorDescription'>{props.errorMessage}</div>}
       </div>
     )
   }

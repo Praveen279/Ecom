@@ -1,0 +1,25 @@
+.loginContainer {
+  margin: 10% 30%;
+  padding: 30px;
+  border: 1px solid #CCC;
+}
+
+.loginBtnWrapper {
+  padding: 20px;
+  margin-top: 40px;
+  text-align: center;
+}
+
+.loginBtn{
+  padding: 5px 20px;
+  font-size: 18px;
+  margin-bottom: 20px;
+}
+
+.forgotPwd {
+  font-weight: normal;
+}
+
+.pwdLoginInput {
+  padding-top: 10px;
+}

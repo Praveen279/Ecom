@@ -276,9 +276,70 @@ export function deleteProduct(id) {
 export function login(user) {
   return function(dispatch) {
     dispatch({
-      type: 'LOGIN_SUCCESS',
-      payload: user 
+      type: 'LOGIN_REQUEST'
     });
+    return fetch('http://localhost:8080/login', {
+      method: 'post',
+      body: JSON.stringify({
+        userName: user.userName,
+        password: user.password
+      })
+    })
+      .then(response => response.json().then(response => ({ response })))
+      .then(({ response}) => {
+        if (!response) {
+          dispatch({
+            type: 'LOGIN_FAILURE',
+            error: 'Error Occured'
+          });
+        } else {
+          dispatch({
+            type: 'LOGIN_SUCCESS',
+            payload: response
+          });
+        }
+      });
+  }
+}
+
+export function createUser(user) {
+  return function(dispatch) {
+    dispatch({
+      type: 'SIGNUP_REQUEST'
+    });
+    return fetch('http://localhost:8080/createUser', {
+      method: 'post',
+      body: JSON.stringify({
+        firstName : user.firstName,
+        lastName : user.lastName,
+        email : user.email,
+        telephone : user.telephone,
+        fax : user.fax,
+        businessLicenceNumber : user.businessLicenceNumber,
+        company : user.company,
+        addressOne : user.addressOne,
+        addressTwo : user.addressTwo,
+        city : user.city,
+        postcode : user.postcode,
+        password : user.password,
+        confirmPassword : user.confirmPassword,
+        name: user.name
+      })
+    })
+      .then(response => response.json().then(response => ({ response })))
+      .then(({ response}) => {
+        if (!response) {
+          dispatch({
+            type: 'SIGNUP_FAILURE',
+            error: 'Error Occured'
+          });
+        } else {
+          dispatch({
+            type: 'SIGNUP_SUCCESS',
+            payload: response
+          });
+        }
+      });
   }
 }
 
